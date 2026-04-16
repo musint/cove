@@ -36,7 +36,7 @@ export default function RewardsShop() {
       >
         <div className="logo" style={{ marginBottom: '4px' }}>Rewards</div>
         <div className="currency-badge" style={{ display: 'inline-block' }}>
-          🪙 {data.currency.balance.toLocaleString()}
+          🪙 {(Math.round(data.currency.balance * 10) / 10).toLocaleString()}
         </div>
       </div>
 

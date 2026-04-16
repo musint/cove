@@ -41,9 +41,9 @@ export default function SessionComplete() {
           zIndex: 1,
         }}
       >
-        <div style={{ fontSize: '32px', marginBottom: '8px' }}>+{currencyEarned} 🪙</div>
+        <div style={{ fontSize: '32px', marginBottom: '8px' }}>+{Math.round(currencyEarned * 10) / 10} 🪙</div>
         <div style={{ fontSize: '13px', opacity: 0.7 }}>
-          Total: {data.currency.balance.toLocaleString()} coins
+          Total: {(Math.round(data.currency.balance * 10) / 10).toLocaleString()} coins
         </div>
         {newElement && (
           <div style={{ marginTop: '12px', fontSize: '14px' }}>

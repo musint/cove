@@ -24,7 +24,7 @@ export default function Home() {
         }}
       >
         <div className="logo">cove</div>
-        <div className="currency-badge">🪙 {data.currency.balance.toLocaleString()}</div>
+        <div className="currency-badge">🪙 {(Math.round(data.currency.balance * 10) / 10).toLocaleString()}</div>
       </div>
 
       {/* Island */}

@@ -43,7 +43,7 @@ export default function useCoveData() {
 
   const completeSession = useCallback((duration) => {
     update((prev) => {
-      const currencyEarned = duration;
+      const currencyEarned = Math.round(duration * 10) / 10;
       const unlockedIds = prev.island.elements.map((e) => e.id);
       const nextElement = getNextElement(unlockedIds);
 
