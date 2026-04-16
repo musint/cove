@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import DurationPicker from './screens/DurationPicker';
 import FocusSession from './screens/FocusSession';
@@ -16,7 +16,7 @@ function Placeholder({ name }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/duration" element={<DurationPicker />} />
@@ -25,6 +25,6 @@ export default function App() {
         <Route path="/rewards" element={<RewardsShop />} />
         <Route path="/stats" element={<Placeholder name="Stats" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
