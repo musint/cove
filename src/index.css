@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: white;
+  background: #1a1a2e;
+}
+
+/* Background gradients */
+.bg-home {
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #1a8a7d 90%, #2ecc71 100%);
+  min-height: 100vh;
+}
+
+.bg-focus {
+  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a3e 40%, #0f3460 70%, #1a8a7d 90%, #2ecc71 100%);
+  min-height: 100vh;
+}
+
+.bg-sunrise {
+  background: linear-gradient(180deg, #2d1b69 0%, #7c3aed 20%, #f59e0b 50%, #fb923c 70%, #1a8a7d 90%, #2ecc71 100%);
+  min-height: 100vh;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #f9a8d4, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary button (START, Begin Focus) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  border: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 25px rgba(168, 85, 247, 0.5), 0 0 40px rgba(236, 72, 153, 0.2);
+}
+
+.btn-primary-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.btn-primary-pill {
+  padding: 14px 40px;
+  border-radius: 28px;
+  font-size: 16px;
+}
+
+/* Currency badge */
+.currency-badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+}
+
+/* Frosted glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}
+
+/* Animations */
+@keyframes pulse-grow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.15); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.5) drop-shadow(0 0 8px rgba(255, 255, 200, 0.8)); }
+}
+
+.anim-pulse {
+  animation: pulse-grow 2s ease-in-out infinite;
+}
+
+.anim-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
