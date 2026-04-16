@@ -86,6 +86,24 @@ export default function DurationPicker() {
         >
           Begin Focus
         </button>
+
+        {/* Test button — 10 seconds */}
+        <button
+          onClick={() => navigate('/focus', { state: { duration: 10 / 60 } })}
+          style={{
+            marginTop: '16px',
+            background: 'none',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: '20px',
+            padding: '8px 20px',
+            color: 'white',
+            fontSize: '12px',
+            opacity: 0.5,
+            cursor: 'pointer',
+          }}
+        >
+          Test: 10 seconds
+        </button>
       </div>
     </div>
   );
